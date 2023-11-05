@@ -116,6 +116,7 @@ void *func(void *argums) {
             }
         }
 
+        // wait for all threads to finish allocating memory
         pthread_barrier_wait(&args->barrier);
 
         // compute start and end for each thread
@@ -135,6 +136,7 @@ void *func(void *argums) {
             }
         }
 
+        // wait for all threads to finish scaling
         pthread_barrier_wait(&args->barrier);
 
         // free old image and replace it with the new one only one time
@@ -148,6 +150,7 @@ void *func(void *argums) {
         }
     }
 
+    // wait for all threads to finish replacing the old image with the new one
     pthread_barrier_wait(&args->barrier);
 
     image = args->image;
@@ -175,6 +178,7 @@ void *func(void *argums) {
         }
     }
 
+    // wait for all threads to finish allocating memory
     pthread_barrier_wait(&args->barrier);
 
     unsigned char **grid = args->grid;
@@ -227,6 +231,7 @@ void *func(void *argums) {
 
     args->grid = grid;
 
+    // wait for all threads to finish sampling the grid
     pthread_barrier_wait(&args->barrier);
 
     // march function //////////////////////////////////////////////////////////////////////////////////////////////////////////
