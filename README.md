@@ -1,7 +1,7 @@
 ### Stefan Diana Maria - 332CC
 # Desenarea paralela de curbe contur folosind algoritmul Marching Squares
 
-- Am combinat functiile `rescale_image`, `sample_grid` si `march` intr-o functie `func`, de tip void*, care este apelata pe fiecare thread. 
+- Am combinat functiile `rescale_image`, `sample_grid` si `march` intr-o functie `func`, de tip *void**, care este apelata pe fiecare thread. 
 - Argumentele necesare functiei sunt transmise printr-un element al vectorului de tip `arg_func_wrapper`, care contine id-ul threadului curent si un pointer catre `args` (de tip `arg_func`). `args` contine toate argumentele necesare functiilor initiale, bariera si numarul de threaduri.
 
 ## Paralelizarea programului 
