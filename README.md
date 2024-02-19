@@ -8,3 +8,6 @@
 - Pentru fiecare `for` au fost impartite calculele la numarul de threaduri, prin calcularea unui `start` si `end` unic fiecarui thread. 
 - Pentru instructiunile ce trebuie repetate o singura data (alocarile si eliberarile de memorie), am folosit threadul cu id-ul 0, urmate de o bariera.
 - Am folosit `bariera` unde era necesara terminarea operatiilor anterioare pentru a continua.
+
+> [!IMPORTANT]
+> `in_6.ppm` si `in_7.ppm` au dimensiuni prea mari. Se gasesc in arhiva!
